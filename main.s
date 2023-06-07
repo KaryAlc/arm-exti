@@ -19,7 +19,6 @@
 .thumb
 .global __main
 __main:
-
         # Prologue
         push    {r7, lr}
         sub     sp, sp, #8
@@ -40,7 +39,7 @@ setup:
 
         # Configure EXI11 and EXI10
         ldr r0, =AFIO_BASE      @ Loads AFIO base
-        eor r1, r1 @ Clears r1
+        eor r1, r1              @ Clears r1
         str r1, [r0, AFIO_EXTICR3_OFFSET] @Selects PA 11 and 10 as inputs
 
         ldr r0, =EXTI_BASE @Loads EXIT base

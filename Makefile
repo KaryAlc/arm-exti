@@ -1,7 +1,7 @@
 # Cross-compiler for ARM
-AS = as
-LD = ld
-OBJCOPY = objcopy
+AS = arm-none-eabi-as
+LD = arm-none-eabi-ld
+OBJCOPY = arm-none-eabi-objcopy
 
 # Compiler and linker flags
 LDFLAGS = -T stm32f103c8t6.ld
